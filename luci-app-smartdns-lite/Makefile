@@ -13,6 +13,10 @@ LUCI_DESCRIPTION:=Provides Luci for smartdns
 LUCI_DEPENDS:=+smartdns
 LUCI_PKGARCH:=all
 
+define Package/luci-app-smartdns-lite/conffiles
+/etc/config/smartdns-lite
+endef
+
 include $(TOPDIR)/feeds/luci/luci.mk
 
 # call BuildPackage - OpenWrt buildroot signature
