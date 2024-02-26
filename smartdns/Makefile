@@ -59,8 +59,6 @@ define Package/smartdns/install
 	$(INSTALL_CONF) $(PKG_BUILD_DIR)/package/openwrt/domain-forwarding.list $(1)/etc/smartdns/domain-forwarding.list
 	$(INSTALL_CONF) $(CURDIR)/conf/custom.conf $(1)/etc/smartdns/custom.conf
 	$(INSTALL_CONF) $(CURDIR)/conf/smartdns.conf $(1)/etc/config/smartdns
-	$(INSTALL_CONF) $(CURDIR)/ip-set/cloudflare-ipv4.txt $(1)/etc/smartdns/ip-set/cloudflare-ipv4.txt
-	$(INSTALL_CONF) $(CURDIR)/ip-set/cloudflare-ipv6.txt $(1)/etc/smartdns/ip-set/cloudflare-ipv6.txt
 endef
 
 $(eval $(call BuildPackage,smartdns))
