@@ -59,6 +59,7 @@ define Package/smartdns/install
 	$(INSTALL_CONF) $(PKG_BUILD_DIR)/package/openwrt/domain-forwarding.list $(1)/etc/smartdns/domain-forwarding.list
 	$(INSTALL_CONF) $(CURDIR)/conf/custom.conf $(1)/etc/smartdns/custom.conf
 	$(INSTALL_CONF) $(CURDIR)/conf/smartdns.conf $(1)/etc/config/smartdns
+	$(INSTALL_CONF) $(CURDIR)/conf/anti-ad-lite.conf $(1)/etc/smartdns/conf.d/anti-ad-lite.conf
 endef
 
 $(eval $(call BuildPackage,smartdns))
